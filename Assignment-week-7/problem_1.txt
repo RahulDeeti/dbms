@@ -1,0 +1,5 @@
+Insertion Anomaly: Adding a new patient into the database requires that we add a visit date, as well as provider information and the diagnosis for that visit. This is extra information that most likely is not useful if we simply want to add a new patient into the database.
+
+Update Anomaly: If we need to update the age of the patient, we will utilize extra resources because we need to update the age of the patient in all rows with the corresponding PatNo. In this table, if we need to increase the age of the patient with PatNo = 1, we need to update rows 1 and 2.
+
+Deletion Anomaly: We may need to delete the records of the patient with PatNo = 1. To do this, we must delete the associated visits they had, as well as the diagnoses performed. This could be undesired if we still want to see which providers performed which diagnoses on which dates, regardless of the patients involved.

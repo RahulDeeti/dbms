@@ -1,0 +1,16 @@
+6)
+
+The following table conversion uses the Entity Type Rule and the M-N Rule.
+
+Owner(OwnId, OwnName, OwnPhone)
+
+Primary Key: OwnId
+Property(PropId, BldgName, UnitNo, Bdrms)
+
+Primary Key: PropId
+Shares(PropId, OwnId, StartWeek, EndWeek)
+
+Primary Key: PropId and OwnId
+FOREIGN KEY(PropId) REFERENCES Property
+FOREIGN KEY(OwnId) REFERENCES Owner
+Columns: Attributes listed

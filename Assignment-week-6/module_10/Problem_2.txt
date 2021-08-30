@@ -1,0 +1,10 @@
+2) For the ERD in Figure 1, you should indicate applications of the 1-M relationship rule. For each 1-M relationship rule application, you should indicate the changes to the tables you listed in problem 1 including foreign key columns and NOT NULL constraints for foreign keys if necessary.
+
+Loan(LoanNo, StdNo, LenderNo, InstID, ProcDate, DisbMethod, DisbBank, DateAuth, NoteValue, Subsidized, Rate)
+
+FOREIGN KEY(StdNo) REFERENCES Student
+FOREIGN KEY(LenderNo) REFERENCES Lender
+FOREIGN KEY(InstID) REFERENCES Institution
+StdNo NOT NULL
+LenderNo NOT NULL
+InstID NOT NULL

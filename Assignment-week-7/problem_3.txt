@@ -1,0 +1,19 @@
+the Student table:
+
+The dependencies between StdNoand StdEmailviolate BCNF. Both StdNoand
+StdEmailare determinants
+Student(StdNo, StdName, StdEmail, StdAddress, StdCity, StdState, StdZip )
+UNIQUE(StdEmail)
+
+
+The Institution table
+
+The dependencies between InstNoand InstNameviolate BCN
+Institution (InstNo, InstName, InstMascot)
+UNIQUE(InstName)
+
+
+The lender table
+
+Lender (LenderNo, LenderName)
+UNIQUE(LenderName)

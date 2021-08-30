@@ -1,0 +1,20 @@
+Steps of BCNF Normalization Process:
+
+Group FDs with the same determinant (LHS)
+PatNo -> PatAge, PatZip PatZip -> PatCity VisitNo -> VisitDate, PatNo ProvNo -> ProvSpecialty, ProvEmail VisitNo, ProvNo -> Diagnosis ProvEmail -> ProvNo
+
+Create Tables using Determinant as primary key, adding foreign keys where necessary (Bold indicates primary key, Italics indicates foreign key)
+Patient(PatNo, PatAge, PatZip) FOREIGN KEY (PatZip) REFERENCES Zip
+Zip(PatZip, PatCity)
+Visit(VisitNo, VisitDate, PatNo) FOREIGN KEY (PatNo) REFERENCES Patient
+Provider(ProvNo, ProvSpecialty, ProvEmail) FOREIGN KEY (ProvEmail) REFERENCES ProviderEmail
+Appointment(VisitNo, ProvNo, Diagnosis) FOREIGN KEY (VisitNo) REFERENCES Visit FOREIGN KEY (ProvNo) REFERENCES Provider
+ProviderEmail(ProvEmail, ProvNo) FOREIGN KEY (ProvNo) REFERENCES Provider
+Merge tables if one contains columns that are a subset of another table
+Through this process we can only remove the ProviderEmail table. We can also remove the foreign key constraints on the other table definitions that reference these tables, as well as add additional UNIQUE constraints as required, resulting in our normalized list of final tables:
+
+Patient(PatNo, PatAge, PatZip) FOREIGN KEY (PatZip) REFERENCES Zip
+Zip(PatZip, PatCity)
+Visit(VisitNo, VisitDate, PatNo) FOREIGN KEY (PatNo) REFERENCES Patient
+Provider(ProvNo, ProvSpecialty, ProvEmail) UNIQUE ProviderEmail
+Appointment(VisitNo, ProvNo, Diagnosis) FOREIGN KEY (VisitNo) REFERENCES Visit FOREIGN KEY (ProvNo) REFERENCES Provider

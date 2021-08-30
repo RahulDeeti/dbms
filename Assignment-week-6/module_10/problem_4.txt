@@ -1,0 +1,5 @@
+4) For the ERD in Figure 1, you should indicate applications of the identifying relationship rule. For each identifying relationship rule application, you should indicate the changes to the tables you listed in problem 2.
+
+DisburseLine(DateSent, LoanNo, Amount, OrigFee, GuarFee)
+FOREIGN KEY(LoanNo) REFERENCES Loan
+LoanNo NOT NULL

@@ -1,0 +1,4 @@
+3)For the ERD in Figure 1, you should indicate applications of the M-N relationship rule. For each M-N relationship rule application, you should list the table name, primary key, and other columns.
+
+ans:
+There are NONE.

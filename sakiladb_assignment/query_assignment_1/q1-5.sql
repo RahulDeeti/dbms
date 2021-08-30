@@ -1,0 +1,1 @@
+select count(*) as 'Sean williams movies' from film_list where actors like '%SEAN WILLIAMS%';

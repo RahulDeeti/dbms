@@ -1,0 +1,19 @@
+1) For the ERD in Figure 1, you should indicate the applications of the entity type rule. For each entity type rule application, you should identify the table name, primary key, and other columns. You do not need to write CREATE TABLE statements.
+
+
+Table Name: Student
+Primary Key: StdNo
+Columns: (StdNo, StdName, StdAddress, StdCity, StdState, StdZip, StdEmail)
+
+
+Table Name: Loan
+Primary Key: LoanNo
+Columns: (LoanNo, ProcDate, DisbMethod, DisbBank, DateAuth, NoteValue, Subsidized, Rate)
+
+Table Name: Institution
+Primary Key: InstID
+Columns: (instituteId,InstituteName,InstMascot)
+
+Table Name: Lender
+Primary Key: LenderNo
+Columns: (LenderNo, LendName)

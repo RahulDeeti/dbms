@@ -1,0 +1,6 @@
+5)
+Account(Acctid, AcctName, Balance, FkAcctid)
+
+Primary Key: Acctid
+FOREIGN KEY(FkAcctid) REFERENCES Account
+Columns: (Acctid, AcctName, Balance, FkAcctid)
